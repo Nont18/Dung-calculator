@@ -8,8 +8,11 @@ class MyParser(Parser):
     # Get the token list from the lexer (required)
     tokens = MyLexer.tokens
     precedence = (
-        ('left', "+", MINUS),
         ('left', TIMES, DIVIDE),
+        ('left', "+", MINUS),
+
+        # ('left', "+", MINUS),
+        # ('left', TIMES, DIVIDE),
         ('right', UMINUS),
         )
 
