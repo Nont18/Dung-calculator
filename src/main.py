@@ -22,6 +22,7 @@ class MainWindow(QMainWindow):
     output_lcd:QLCDNumber
     output_lcd1:QLCDNumber
 
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         uic.loadUi("components/main.ui", self)
@@ -60,7 +61,7 @@ class MainWindow(QMainWindow):
         def getPriority(C):
             if (C == '-' or C == '*'):
                 return 1
-            elif (C == '+' or C == '/'):
+            elif (C == '+' or C == '/'):  # + มีpriority สูงกว่า * (ดูตามค่า)
                 return 2
             elif (C == '^'):
                 return 3
@@ -117,18 +118,77 @@ class MainWindow(QMainWindow):
                 tmp = op + op2 + op1
                 operands.append(tmp)
             return operands[-1]
+
+
+
+        def infixToPostfix(infix): #infix คือ 1+2
+            operators = []
+            operands = []
+        
+            for i in range(len(infix)):
+                
+                if (infix[i] == '(' ):
+                    operators.append(infix[i])
+        
+                elif (infix[i] == ')'):
+                    while (len(operators)!=0 and (operators[-1] != '(' )):
+                        op1 = operands[-1]
+                        operands.pop()
+                        op2 = operands[-1]
+                        operands.pop()
+                        op = operators[-1]
+                        operators.pop()
+                        tmp = op + op2 + op1
+                        operands.append(tmp)
+                    operators.pop()
+                elif (not isOperator(infix[i])):
+                    operands.append(infix[i] + "") #operands = [1,2]
+        
+                else:
+                    while (len(operators)!=0 and getPriority(infix[i]) <= getPriority(operators[-1])):
+                        op1 = operands[-1]
+                        operands.pop()
+        
+                        op2 = operands[-1]
+                        operands.pop()
+        
+                        op = operators[-1]
+                        operators.pop()
+        
+                        tmp =  op2 + op1 + op
+                        operands.append(tmp)
+                    operators.append(infix[i]) #operators = [+]
+        
+            while (len(operators)!=0):
+                op1 = operands[-1]
+                operands.pop()
+        
+                op2 = operands[-1]
+                operands.pop()
+        
+                op = operators[-1]
+                operators.pop()
+        
+                tmp =  op2 + op1 + op
+                operands.append(tmp)
+            return operands[-1]
+
+
         print("Calculate")
         lexer = MyLexer()
         parser = MyParser()
         memory = Memory()
         input_text = self.input_text.text()
         out1 = infixToPrefix(input_text)
+        out2 = infixToPostfix(input_text)
         result = parser.parse(lexer.tokenize(input_text))
         print(type(result))
         print(type(input_text))
         print(out1)
+        print(out2)
         self.output_lcd.display(result)
         self.label.setText(out1)
+        self.label_2.setText(out2)
 
         # for debug
         print(memory)

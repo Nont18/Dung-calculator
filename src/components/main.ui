@@ -328,7 +328,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>390</y>
+      <y>350</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -343,11 +343,11 @@
      <string>Output:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="output_label">
+   <widget class="QLabel" name="output_label_3">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>470</y>
+      <x>10</x>
+      <y>400</y>
       <width>151</width>
       <height>51</height>
      </rect>
@@ -365,8 +365,8 @@
    <widget class="QLCDNumber" name="output_lcd">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>400</y>
+      <x>150</x>
+      <y>350</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -422,6 +422,43 @@
     <property name="geometry">
      <rect>
       <x>160</x>
+      <y>400</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft New Tai Lue</family>
+      <pointsize>25</pointsize>
+     </font>
+    </property>
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
       <y>470</y>
       <width>221</width>
       <height>51</height>
@@ -450,6 +487,25 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="output_label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft New Tai Lue</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Output2:</string>
     </property>
    </widget>
   </widget>
