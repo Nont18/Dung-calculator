@@ -122,3 +122,17 @@ We use `PyQt6` and `qt designer 6` for GUI.
 You can start to learn this tool from [here](https://www.pythonguis.com/tutorials/pyqt6-first-steps-qt-designer/#:~:text=To%20load%20.,a%20fully%2Dfunctional%20PyQt6%20object).
 
 To launch `QT designer`, use `pipenv run pyqt6-tools designer` and to open the existing UI use `pipenv run pyqt6-tools designer <path/to/file.ui>`
+
+
+
+
+
+## Calculator Project
+
+How to use this repository?
+
+1.Clone this repo by using command `git clone https://github.com/Nont18/Dung-calculator.git`
+2.If you did not install PyQt6, then you can use `pip install PyQt6` and `pip install pyqt6-tools`
+3.If PyInstaller and PyQt6 are installed in different environments. Try running: `python -m pip install pyinstaller pyqt6` and `python -m PyInstaller question.py` or see discussion from https://github.com/pyinstaller/pyinstaller/issues/7122 
+4.Once you already clone the repo, you can `cd .\src\`
+5.type `python main.py` to run the project by local
