@@ -102,6 +102,5 @@ You can start to learn this tool from [here](https://www.pythonguis.com/tutorial
 To launch `QT designer`, use `pipenv run pyqt6-tools designer` and to open the existing UI use `pipenv run pyqt6-tools designer <path/to/file.ui>`
 
 
-
-
+<img src="../Dung-calculator/imag/Capture.PNG" width="350" title="example of calculator project">
 
