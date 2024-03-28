@@ -105,6 +105,6 @@ To launch `QT designer`, use `pipenv run pyqt6-tools designer` and to open the e
 
 ## Sample of usage
 
-![alt text](image-1.png)
+![alt text](image.png)
 
-![alt text](image-2.png)
+![!\[alt text\](image-2.png)](imag/Capture1.PNG)
