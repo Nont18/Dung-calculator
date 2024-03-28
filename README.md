@@ -1,32 +1,14 @@
-# Compiler Starter Project
+# Calculator Project
 
-- [Compiler Starter Project](#compiler-starter-project)
-  - [Dependencies](#dependencies)
-  - [To use](#to-use)
-    - [Run on Docker (preferred)](#run-on-docker-preferred)
-    - [Run on Local Machine](#run-on-local-machine)
-  - [Code Explain](#code-explain)
-    - [components/lexica.py](#componentslexicapy)
-    - [components/parsers.py](#componentsparserspy)
-      - [MyParser class](#myparser-class)
-      - [ASTParser class](#astparser-class)
-    - [components/memory.py](#componentsmemorypy)
-    - [main.py and components/main.ui](#mainpy-and-componentsmainui)
-  - [Design a GUI](#design-a-gui)
-
-
-This is the starter project for the Programming Language and Compiler course @ AIT. 
-Since 2024, we have used `Python`.
+This is the project for the Programming Language and Compiler course @ AIT. 
+2024, I have used `Python`.
 
 ## Dependencies
-- Python version 3.9.18
+- Python version 3.11.7
 - `sly` as a submodule [link](https://github.com/dabeaz/sly)
 - `PyQt6` for GUI development
 
 ## To use
-
-I designed this project to run on a `Docker` container. 
-However, if you are not a `Docker` enthusiast like me, you can still run this project locally.
 
 ### Run on Docker (preferred)
 
@@ -44,15 +26,11 @@ Once you install `Docker` in your system, you can do the following.
 
 ### Run on Local Machine
 
-This might not work because I have never tried this on my machine.
-But, generally, it should be as follows.
-
-1. (Optional) Click `Use this template` on the top right of this page to clone this to your repository.
-2. Clone the project to your local machine.
-3. Clone submodule with this `git submodule update --init --recursive`.
-4. Set `PYTHONPATH` to include `/path/to/sly`.
-5. Run `pipenv install` inside `src/`.
-6. You might also need to install `PyQt6` separately.
+1. Clone this repo by using command `git clone https://github.com/Nont18/Dung-calculator.git`        
+2. If you did not install PyQt6, then you can use `pip install PyQt6` and `pip install pyqt6-tools`          
+3. If PyInstaller and PyQt6 are installed in different environments. Try running: `python -m pip install pyinstaller pyqt6` and `python -m PyInstaller question.py` or see discussion from https://github.com/pyinstaller/pyinstaller/issues/7122          
+4. Once you already cloned the repo, you can `cd .\src\`       
+5. type `python main.py` to run the project locally.    
 
 
 ## Code Explain
@@ -118,7 +96,7 @@ This shows how to bind a function with a button and how to display the result ba
 
 ## Design a GUI
 
-We use `PyQt6` and `qt designer 6` for GUI.
+I use `PyQt6` and `qt designer 6` for GUI.
 You can start to learn this tool from [here](https://www.pythonguis.com/tutorials/pyqt6-first-steps-qt-designer/#:~:text=To%20load%20.,a%20fully%2Dfunctional%20PyQt6%20object).
 
 To launch `QT designer`, use `pipenv run pyqt6-tools designer` and to open the existing UI use `pipenv run pyqt6-tools designer <path/to/file.ui>`
@@ -127,12 +105,3 @@ To launch `QT designer`, use `pipenv run pyqt6-tools designer` and to open the e
 
 
 
-## Calculator Project
-
-How to use this repository?
-
-1.Clone this repo by using command `git clone https://github.com/Nont18/Dung-calculator.git`        
-2.If you did not install PyQt6, then you can use `pip install PyQt6` and `pip install pyqt6-tools`          
-3.If PyInstaller and PyQt6 are installed in different environments. Try running: `python -m pip install pyinstaller pyqt6` and `python -m PyInstaller question.py` or see discussion from https://github.com/pyinstaller/pyinstaller/issues/7122          
-4.Once you already clone the repo, you can `cd .\src\`       
-5.type `python main.py` to run the project by local       
