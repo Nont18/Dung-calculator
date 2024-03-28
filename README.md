@@ -101,5 +101,8 @@ You can start to learn this tool from [here](https://www.pythonguis.com/tutorial
 
 To launch `QT designer`, use `pipenv run pyqt6-tools designer` and to open the existing UI use `pipenv run pyqt6-tools designer <path/to/file.ui>`
 
+## Sample of usage
 
 ![alt text](image-1.png)
+
+![alt text](image-2.png)
