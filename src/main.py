@@ -12,10 +12,6 @@ class MainWindow(QMainWindow):
     # Do this for intellisense
     button_1:QPushButton
     button_2:QPushButton
-    # button_3:QPushButton
-    # button_4:QPushButton
-    # button_5:QPushButton
-    # button_6:QPushButton
     button_plus:QPushButton
     button_equal:QPushButton
     input_text:QLineEdit
