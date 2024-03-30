@@ -52,6 +52,7 @@ class MainWindow(QMainWindow):
     
     def push_equal(self):
         def isOperator(c):
+            #If c is between this character, it will return 0
             return (not (c >= 'a' and c <= 'z') and not(c >= '0' and c <= '9') and not(c >= 'A' and c <= 'Z'))
 
         def getPriority(C):
@@ -118,12 +119,12 @@ class MainWindow(QMainWindow):
 
 
         def infixToPostfix(infix): #infix คือ 1+2
-            operators = []
-            operands = []
+            operators = [] #define array to store numbers
+            operands = [] #define array to store operators
         
             for i in range(len(infix)):
                 
-                if (infix[i] == '(' ):
+                if (infix[i] == '(' ): #if seek open paren, then append to operators
                     operators.append(infix[i])
         
                 elif (infix[i] == ')'):
@@ -136,12 +137,12 @@ class MainWindow(QMainWindow):
                         operators.pop()
                         tmp = op + op2 + op1
                         operands.append(tmp)
-                    operators.pop()
+                    operators.pop() #pop operators every time
                 elif (not isOperator(infix[i])):
                     operands.append(infix[i] + "") #operands = [1,2]
         
                 else:
-                    while (len(operators)!=0 and getPriority(infix[i]) <= getPriority(operators[-1])):
+                    while (len(operators)!=0 and getPriority(infix[i]) <= getPriority(operators[-1])): #check priority
                         op1 = operands[-1]
                         operands.pop()
         
@@ -151,7 +152,7 @@ class MainWindow(QMainWindow):
                         op = operators[-1]
                         operators.pop()
         
-                        tmp =  op2 + op1 + op
+                        tmp =  op2 + op1 + op #concatenate 
                         operands.append(tmp)
                     operators.append(infix[i]) #operators = [+]
         
@@ -170,18 +171,21 @@ class MainWindow(QMainWindow):
             return operands[-1]
 
 
+        #Calculate
         print("Calculate")
         lexer = MyLexer()
         parser = MyParser()
         memory = Memory()
         input_text = self.input_text.text()
-        out1 = infixToPrefix(input_text)
-        out2 = infixToPostfix(input_text)
+        out1 = infixToPrefix(input_text) #infixtoprefix
+        out2 = infixToPostfix(input_text) #infixtopostfix
         result = parser.parse(lexer.tokenize(input_text))
+        #print in terminal
         print(type(result))
         print(type(input_text))
-        print(out1)
-        print(out2)
+        print(out1) #infixtoprefix
+        print(out2) #infixtopostfix
+        #print to lcd screen
         self.output_lcd.display(result)
         self.label.setText(out1)
         self.label_2.setText(out2)

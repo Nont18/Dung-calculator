@@ -12,6 +12,9 @@ This is the project for the Programming Language and Compiler course @ AIT.
 
 ## To use
 
+Normally, i run this project by local. I have not try to run with Docker yet. 
+If you want you can try by yourself but local is fine as well.
+
 ### Run on Docker (preferred)
 
 Once you install `Docker` in your system, you can do the following.
@@ -30,9 +33,10 @@ Once you install `Docker` in your system, you can do the following.
 
 1. Clone this repo by using command `git clone https://github.com/Nont18/Dung-calculator.git`        
 2. If you did not install PyQt6, then you can use `pip install PyQt6` and `pip install pyqt6-tools`          
-3. If PyInstaller and PyQt6 are installed in different environments. Try running: `python -m pip install pyinstaller pyqt6` and `python -m PyInstaller question.py` or see discussion from https://github.com/pyinstaller/pyinstaller/issues/7122          
-4. Once you already cloned the repo, you can `cd .\src\`       
-5. type `python main.py` to run the project locally.    
+3. If PyInstaller and PyQt6 are installed in different environments. Try running: `python -m pip install pyinstaller pyqt6` and `python -m PyInstaller question.py` or see discussion from https://github.com/pyinstaller/pyinstaller/issues/7122    
+4. Clone submodule with this `git submodule update --init --recursive`.      
+5. Once you already cloned the repo, you can `cd .\src\`       
+6. type `python main.py` or click right of VScode conner to run the project locally.    
 
 
 ## Code Explain
@@ -64,7 +68,7 @@ This file has a main just for testing the class.
 ### components/parsers.py
 
 There are two parsers.
-(1) `MyParser` and (2) `ASTParser`.
+(1) `MyParser` and (2) `ASTParser`. In this project, i use MyParser for developing.
 
 #### MyParser class
 
@@ -93,8 +97,10 @@ Whether this solution is appropriate or not is your judgment.
 ### main.py and components/main.ui
 
 Finally, the `main.py` is the main file to run the entire project.
-It will render a GUI from `components/main.ui` that was designed from `PyQt6`.
-This shows how to bind a function with a button and how to display the result back to the GUI.
+It will render a GUI from `components/main.ui` that was designed from `PyQt6`
+not only run entire project but also translate infix to prefix and postfix as well.
+This shows how to bind a function with a button then how to display the result back to the GUI and
+translate infix to prefix and postfix.
 
 ## Design a GUI
 
