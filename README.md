@@ -12,7 +12,7 @@ All of stuff, are in this repository.
 - `sly` as a submodule [link](https://github.com/dabeaz/sly)
 - `PyQt6` for GUI development
 
-## To use
+## how to run
 
 Normally, i run this project by local. I have not try to run with Docker yet. 
 If you want you can try by yourself but local is fine as well.
