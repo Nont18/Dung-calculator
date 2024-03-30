@@ -14,10 +14,9 @@ All of stuff, are in this repository.
 
 ## how to run
 
-Normally, i run this project by local. I have not try to run with Docker yet. 
-If you want you can try by yourself but local is fine as well.
+Normally, i run this project by local. Local is fine as well.
 
-### Run on Docker (preferred)
+### Run on Docker
 
 Once you install `Docker` in your system, you can do the following.
 
