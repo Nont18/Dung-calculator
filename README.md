@@ -5,6 +5,8 @@
 This is the project for the Programming Language and Compiler course @ AIT. 
 2024, I have used `Python`.
 
+All of stuff, are in this repository.
+
 ## Dependencies
 - Python version 3.11.7
 - `sly` as a submodule [link](https://github.com/dabeaz/sly)
